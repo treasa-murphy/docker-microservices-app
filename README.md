@@ -59,7 +59,7 @@ WebApp: http://localhost:8090
 Adminer: http://localhost:8091
 
 
-### **Course Info**
+### **Course Information**
 
 Module: COMP30520 - Cloud Computing
 
