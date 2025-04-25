@@ -1,6 +1,6 @@
-Docker Microservices Application
+## **Docker Microservices Application**
 
-Overview
+### **Overview**
 
 This project demonstrates a microservice-based architecture using Docker and Docker Compose. It 
 integrates different technology stacks into a single, containerised system, showcasing real-world 
@@ -8,7 +8,8 @@ deployment practices.
 
 The project was developed for COMP 30520: Cloud Computing at University College Dublin.
 
-System Architecture
+### **System Architecture**
+
 The system consists of four main components:
 
 WebApp (Flask-based frontend) — Port 8090
@@ -22,7 +23,8 @@ Adminer (Database management interface) — Port 8091
 Services are deployed using Docker Compose, with dedicated frontend and backend networks ensuring 
 proper isolation.
 
-Technologies Used
+### **Technologies Used**
+
 Python 3.9 (Flask, FastAPI)
 
 PostgreSQL
@@ -31,7 +33,8 @@ Adminer
 
 Docker and Docker Compose
 
-Project Structure
+### **Project Structure**
+
 web_app/
 
 app.py
@@ -62,32 +65,31 @@ video.mp4 — Screen recording demonstrating the project
 
 README.md — This file
 
-How to Run
-Clone this repository:
+### **How to Run**
+
+**Clone this repository:**
 
 git clone git@github.com:treasa-murphy/docker-microservices-app.git
 cd docker-microservices-app
 
-Create a .env file in the project root:
+**Create a .env file in the project root:**
 
 POSTGRES_DB=student
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
 
-Build and start the services:
+**Build and start the services:**
 
 docker compose up --build
 
-Access the application:
+**Access the application:**
 
 WebApp: http://localhost:8090
 
 Adminer: http://localhost:8091
 
 
-Docker Compose orchestration
-
-Course Info
+### **Course Info**
 
 Module: COMP30520 - Cloud Computing
 
