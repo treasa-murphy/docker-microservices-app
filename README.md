@@ -10,15 +10,17 @@ The project was developed for COMP 30520: Cloud Computing at University College 
 
 ### **System Architecture**
 
+![Application Structure](app_structure.png)
+
 The system consists of four main components:
 
-WebApp (Flask-based frontend) — Port 8090
+WebApp (Flask-based frontend) - Port 8090
 
-API (FastAPI backend service) — Internal communication, not exposed externally
+API (FastAPI backend service) - Internal communication, not exposed externally
 
-Database (PostgreSQL) — Internal service for data persistence
+Database (PostgreSQL) - Internal service for data persistence
 
-Adminer (Database management interface) — Port 8091
+Adminer (Database management interface) - Port 8091
 
 Services are deployed using Docker Compose, with dedicated frontend and backend networks ensuring 
 proper isolation.
