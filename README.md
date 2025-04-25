@@ -10,7 +10,7 @@ The project was developed for COMP 30520: Cloud Computing at University College 
 
 ### **System Architecture**
 
-![Application Structure](app_structure.png)
+![Application Structure](app.png)
 
 The system consists of four main components:
 
