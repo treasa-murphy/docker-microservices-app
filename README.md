@@ -33,38 +33,6 @@ Adminer
 
 Docker and Docker Compose
 
-### **Project Structure**
-
-web_app/
-
-app.py
-
-student.html
-
-requirements.txt
-
-Dockerfile
-
-api/
-
-main.py
-
-db_setup.py
-
-requirements.txt
-
-Dockerfile
-
-.env — Environment variables for the database
-
-docker-compose.yml — Defines all services
-
-report.pdf — Report documenting setup steps and results
-
-video.mp4 — Screen recording demonstrating the project
-
-README.md — This file
-
 ### **How to Run**
 
 **Clone this repository:**
