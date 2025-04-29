@@ -1,70 +1,104 @@
-## **Docker Microservices Application**
+# **Docker Microservices Application**
 
-### **Overview**
+## **Overview**
 
-This project demonstrates a microservice-based architecture using Docker and Docker Compose. It 
-integrates different technology stacks into a single, containerised system, showcasing real-world 
-deployment practices.
+This project demonstrates a microservice-based architecture using Docker and Docker Compose.  
+It integrates multiple technology stacks into a single, containerised system, showcasing real-world deployment practices.
 
-The project was developed for COMP 30520: Cloud Computing at University College Dublin.
+The project was developed for **COMP 30520: Cloud Computing** at **University College Dublin**.
 
-### **System Architecture**
+---
+
+## **System Architecture**
 
 ![Application Structure](app.png)
 
 The system consists of four main components:
 
-WebApp (Flask-based frontend) - Port 8090
+- **WebApp (Flask-based frontend)** - Available at [http://localhost:8090](http://localhost:8090)
+- **API (FastAPI backend service)** - Internal service running on port `8080`, not directly exposed externally
+- **Database (PostgreSQL)** - Internal database for data persistence
+- **Adminer (Database management interface)** - Available at [http://localhost:8091](http://localhost:8091)
 
-API (FastAPI backend service) - Internal communication, not exposed externally
+Services are deployed using **Docker Compose**, with dedicated backend networks ensuring proper isolation between components.
 
-Database (PostgreSQL) - Internal service for data persistence
+---
 
-Adminer (Database management interface) - Port 8091
+## **Technologies Used**
 
-Services are deployed using Docker Compose, with dedicated frontend and backend networks ensuring 
-proper isolation.
+- Python 3.9
+  - Flask (Web Frontend)
+  - FastAPI (Backend API)
+- PostgreSQL (Database)
+- Adminer (Database Admin Interface)
+- Docker and Docker Compose
 
-### **Technologies Used**
+---
 
-Python 3.9 (Flask, FastAPI)
+## **How to Run**
 
-PostgreSQL
+### 1. Clone this repository:
 
-Adminer
-
-Docker and Docker Compose
-
-### **How to Run**
-
-**Clone this repository:**
-
+```bash
 git clone git@github.com:treasa-murphy/docker-microservices-app.git
 cd docker-microservices-app
+```
 
-**Create a .env file in the project root:**
+---
 
-POSTGRES_DB=student
+### 2. Create a `.env` file in the project root:
+
+```bash
+POSTGRES_DB=students
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=password
+```
 
-**Build and start the services:**
+_(Make sure these match the environment expected by your API and Database containers.)_
 
-docker compose up --build
+---
 
-**Access the application:**
+### 3. Build and start all services:
 
-WebApp: http://localhost:8090
+```bash
+docker compose up --build -d
+```
 
-Adminer: http://localhost:8091
+This will:
+- Build the images if needed
+- Create and start containers for WebApp, API, Database, and Adminer
+- Set up networking between services
 
+---
 
-### **Course Information**
+### 4. Access the application:
 
-Module: COMP30520 - Cloud Computing
+- **WebApp (Flask Frontend):** [http://localhost:8090](http://localhost:8090)
+- **Adminer (Database GUI):** [http://localhost:8091](http://localhost:8091)
 
-Instructor: Dimitris Chatzopoulos
+The **API (FastAPI service)** is running internally on port `8080`, communicating with the WebApp.
 
-Teaching Assistant: John Byabazaire
+---
 
-Institution: University College Dublin (UCD)
+## **Important Notes**
+
+- Ensure Docker Desktop is running before starting the application.
+- To stop all services, run:
+
+```bash
+docker compose down
+```
+
+- The FastAPI interactive documentation is available internally (at `/docs`), if accessed from inside the network.
+
+---
+
+## **Course Information**
+
+- **Module:** COMP30520 — Cloud Computing
+- **Instructor:** Dimitris Chatzopoulos
+- **Teaching Assistant:** John Byabazaire
+- **Institution:** University College Dublin (UCD)
+
+---
+
