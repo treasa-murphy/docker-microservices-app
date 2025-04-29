@@ -95,7 +95,7 @@ docker compose down
 
 ## **Course Information**
 
-- **Module:** COMP30520 — Cloud Computing
+- **Module:** COMP30520 - Cloud Computing
 - **Instructor:** Dimitris Chatzopoulos
 - **Teaching Assistant:** John Byabazaire
 - **Institution:** University College Dublin (UCD)
