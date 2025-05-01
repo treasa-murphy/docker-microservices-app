@@ -2,10 +2,7 @@
 
 ## **Overview**
 
-This project demonstrates a microservice-based architecture using Docker and Docker Compose.  
-It integrates multiple technology stacks into a single, containerised system, showcasing real-world deployment practices.
-
-The project was developed for **COMP 30520: Cloud Computing** at **University College Dublin**.
+This project demonstrates a microservice-based architecture using Docker and Docker Compose.  It integrates multiple technology stacks into a single, containerised system, showcasing real-world deployment practices. The project was developed for **COMP 30520: Cloud Computing** at **University College Dublin**.
 
 ---
 
@@ -65,6 +62,7 @@ docker compose up --build -d
 ```
 
 This will:
+
 - Build the images if needed
 - Create and start containers for WebApp, API, Database, and Adminer
 - Set up networking between services
